@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="images/bookmark.png" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- =====================>fooont -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <!-- =====================>fooont -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmarker</title>
+    <!-- ===============links========== -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script
+      src="https://kit.fontawesome.com/722d0ad37e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- ===============links========== -->
+  </head>
+  <body>
+    <div class="d-flex align-items-center flex-column container perant">
+      <h1>Bookmarker</h1>
+      <div class="my-5 text-center p-4 w-100 child">
+        <h2>
+          <i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites
+          <i class="fa-solid fa-bookmark"></i>
+        </h2>
+
+        <label class="w-100 text-start lapol fw-bold" for="dd">
+          <i class="fa-solid fa-book-bookmark"></i>
+          Site Name
+        </label>
+        <input
+          oninput="validatinputs(this)"
+          class="form-control w-100"
+          placeholder="Bookmarker Name"
+          id="namebook"
+          type="text"
+        />
+        <div class="alert alert-danger d-none p-2 mt-2">
+          Invalid Website names cannot include spaces or special characters like
+          @, #, or $.
+        </div>
+        <label class="w-100 text-start lapol fw-bold" for="dd">
+          <i class="fa-solid fa-link"></i>
+          Site URL
+        </label>
+        <input
+          oninput="validatinputs(this)"
+          class="form-control w-100"
+          placeholder="Website URL"
+          id="urlbook"
+          type="text"
+        />
+        <div class="alert alert-danger d-none p-1 mt-2">
+          Invalid URL! Please make sure it starts with http:// or https://.
+        </div>
+        <button id="btnSubmit" onclick="Addbook()" class="btn-submit btn">
+          Submit
+        </button>
+      </div>
+      <table class="bg-white w-100">
+        <thead class="text-center">
+          <th class="text-capitalize">index</th>
+          <th class="text-capitalize">Website Name</th>
+          <th class="text-capitalize">Visit</th>
+          <th class="text-capitalize">Delete</th>
+        </thead>
+        <tfoot id="mycontent" class="text-center"></tfoot>
+      </table>
+    </div>
+
+    <!-- =============== js=============== -->
+
+    <script src="js/main.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

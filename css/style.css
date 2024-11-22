@@ -1,0 +1,75 @@
+body {
+  background-color: #f7ecde;
+}
+::selection {
+  background-color: #fec260;
+}
+h1 {
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 60px;
+  font-family: "Pacifico";
+  position: relative;
+  margin-top: 50px;
+}
+h1::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  left: 0;
+  bottom: 10px;
+  background-color: #fec260;
+  transition: height 0.5s;
+  z-index: -1;
+}
+h1:hover::before {
+  height: 60%;
+}
+.child {
+  border-top: 2px black dotted;
+  border-bottom: 2px black dotted;
+}
+.child h2 {
+  font-size: 25px;
+  font-weight: bold;
+  background: linear-gradient(to right, #40a55b, #f0e873);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.form-control:focus {
+  box-shadow: 0 0 0 5px #fec26055;
+}
+
+input {
+  height: 40px;
+  border-radius: 5px;
+  border: rgb(223, 219, 219) 1px solid;
+  padding: 15px;
+  margin-top: 5px;
+}
+.lapol {
+  margin-top: 30px;
+}
+i {
+  margin-right: 3px;
+}
+.child button {
+  background-color: #f5572c;
+  color: white;
+  width: 140px;
+  margin-top: 30px;
+  transition: all 0.3s;
+}
+.child button:hover {
+  background-color: #d1512d;
+  color: white;
+}
+thead {
+  height: 40px;
+}
+tfoot td {
+  border-top: 1px rgb(199, 198, 198) solid;
+  border-bottom: 1px rgb(199, 198, 198) solid;
+}
