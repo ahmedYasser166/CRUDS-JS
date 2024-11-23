@@ -38,8 +38,8 @@ function Addbook() {
     localStorage.setItem("Books", JSON.stringify(booksList));
     display();
     clear();
-    NameInput.classList.remove("is-valid")
-    UrlInput.classList.remove("is-valid")
+    NameInput.classList.remove("is-valid");
+    UrlInput.classList.remove("is-valid");
   } else {
     Swal.fire({
       title: "Error!",
